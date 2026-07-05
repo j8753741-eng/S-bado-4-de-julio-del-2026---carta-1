@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sábado 4 de Julio del 2026 - Carta</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Great+Vibes&family=Cinzel:wght@400;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:
+radial-gradient(circle at top,#46305d 0%,#24142f 28%,#120d1d 55%,#09070f 100%);
+
+font-family:'Cormorant Garamond',serif;
+overflow-x:hidden;
+color:#fff;
+min-height:100vh;
+
+}
+
+/* Fondo romántico */
+
+.stars{
+
+position:fixed;
+width:100%;
+height:100%;
+left:0;
+top:0;
+pointer-events:none;
+background-image:
+
+radial-gradient(#ffffffd0 1px,transparent 1px),
+radial-gradient(#ffdff8 1px,transparent 1px),
+radial-gradient(#d8b8ff 1px,transparent 1px);
+
+background-size:
+170px 170px,
+230px 230px,
+290px 290px;
+
+animation:starsMove 70s linear infinite;
+
+opacity:.55;
+
+}
+
+@keyframes starsMove{
+
+from{
+transform:translateY(0);
+}
+
+to{
+transform:translateY(-170px);
+}
+
+}
+
+.moon{
+
+position:fixed;
+
+right:8%;
+top:55px;
+
+width:140px;
+height:140px;
+
+border-radius:50%;
+
+background:
+radial-gradient(circle,#fffef8,#fff3d8 60%,#ffe7aa);
+
+box-shadow:
+
+0 0 35px #fff9cf,
+0 0 80px rgba(255,255,220,.65),
+0 0 150px rgba(255,255,255,.25);
+
+opacity:.92;
+
+}
+
+/* Destellos */
+
+.sparkle{
+
+position:fixed;
+width:100%;
+height:100%;
+pointer-events:none;
+
+}
+
+.sparkle span{
+
+position:absolute;
+width:4px;
+height:4px;
+background:white;
+border-radius:50%;
+animation:twinkle 5s infinite;
+
+}
+
+.sparkle span:nth-child(1){top:10%;left:18%;}
+.sparkle span:nth-child(2){top:28%;left:82%;}
+.sparkle span:nth-child(3){top:55%;left:14%;}
+.sparkle span:nth-child(4){top:70%;left:90%;}
+.sparkle span:nth-child(5){top:82%;left:42%;}
+.sparkle span:nth-child(6){top:17%;left:62%;}
+.sparkle span:nth-child(7){top:91%;left:70%;}
+.sparkle span:nth-child(8){top:38%;left:35%;}
+
+@keyframes twinkle{
+
+0%,100%{
+
+opacity:.15;
+transform:scale(.4);
+
+}
+
+50%{
+
+opacity:1;
+transform:scale(2);
+
+}
+
+}
+
+/* Carta */
+
+.wrapper{
+
+width:100%;
+display:flex;
+justify-content:center;
+padding:90px 20px;
+
+}
+
+.letter{
+
+position:relative;
+
+width:100%;
+max-width:930px;
+
+background:
+
+linear-gradient(180deg,
+rgba(255,252,249,.97),
+rgba(255,247,240,.98));
+
+border-radius:35px;
+
+padding:80px 70px;
+
+overflow:hidden;
+
+box-shadow:
+
+0 0 50px rgba(255,215,245,.15),
+0 0 120px rgba(207,152,255,.20),
+0 35px 80px rgba(0,0,0,.45);
+
+border:2px solid rgba(255,255,255,.45);
+
+}
+
+/* Cristal */
+
+.letter::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(135deg,
+rgba(255,255,255,.35),
+transparent 35%,
+transparent 65%,
+rgba(255,255,255,.18));
+
+pointer-events:none;
+
+}
+
+/* Marco floral */
+
+.corner{
+
+position:absolute;
+
+font-size:58px;
+
+opacity:.22;
+
+color:#b25cff;
+
+}
+
+.c1{
+
+top:18px;
+left:22px;
+transform:rotate(-12deg);
+
+}
+
+.c2{
+
+top:18px;
+right:22px;
+transform:scaleX(-1) rotate(-12deg);
+
+}
+
+.c3{
+
+bottom:18px;
+left:22px;
+transform:rotate(180deg);
+
+}
+
+.c4{
+
+bottom:18px;
+right:22px;
+transform:rotate(180deg) scaleX(-1);
+
+}
+
+/* Encabezado */
+
+.date{
+
+text-align:center;
+
+font-size:20px;
+
+letter-spacing:3px;
+
+color:#9f6ac8;
+
+margin-bottom:18px;
+
+font-weight:600;
+
+}
+
+.title{
+
+font-family:'Cinzel',serif;
+
+text-align:center;
+
+font-size:42px;
+
+line-height:1.45;
+
+color:#5b245f;
+
+margin-bottom:25px;
+
+}
+
+.divider{
+
+width:170px;
+height:2px;
+
+margin:auto;
+
+background:
+
+linear-gradient(to right,
+transparent,
+#bb72ff,
+#ffb8eb,
+#bb72ff,
+transparent);
+
+margin-bottom:45px;
+
+box-shadow:0 0 18px #d9a7ff;
+
+}
+
+.greeting{
+
+font-family:'Great Vibes',cursive;
+
+font-size:48px;
+
+color:#9341cb;
+
+margin-bottom:35px;
+
+}
+
+.content{
+
+font-size:30px;
+
+line-height:2.15;
+
+color:#4b3a46;
+
+text-align:justify;
+
+}
+
+.content p{
+
+margin-bottom:26px;
+
+}
+
+.content strong{
+
+color:#6d1f82;
+font-weight:700;
+
+}
+
+/* Primera letra */
+
+.content p:first-of-type::first-letter{
+
+font-size:72px;
+
+font-family:'Pinyon Script',cursive;
+
+color:#8b3fd3;
+
+float:left;
+
+line-height:.8;
+
+padding-right:10px;
+
+}
+
+/* Separadores */
+
+.separator{
+
+text-align:center;
+
+font-size:28px;
+
+margin:38px 0;
+
+color:#d28cff;
+
+letter-spacing:10px;
+
+}
+
+/* Tarjeta de recuerdo */
+
+.memory{
+
+margin:55px 0;
+
+padding:30px;
+
+border-radius:24px;
+
+background:linear-gradient(135deg,#fff9ff,#fff4fb);
+
+border:1px solid rgba(194,128,255,.35);
+
+box-shadow:0 15px 35px rgba(170,108,255,.12);
+
+position:relative;
+
+}
+
+.memory::before{
+
+content:"❤";
+
+position:absolute;
+
+top:-18px;
+left:50%;
+
+transform:translateX(-50%);
+
+font-size:28px;
+
+color:#b45cff;
+
+background:#fff8fc;
+
+padding:6px 14px;
+
+border-radius:30px;
+
+box-shadow:0 0 18px rgba(180,92,255,.25);
+
+}
+
+.quote{
+
+font-family:'Great Vibes',cursive;
+
+font-size:42px;
+
+text-align:center;
+
+color:#9d4de0;
+
+line-height:1.4;
+
+margin:35px 0;
+
+}
+
+/* Firma */
+
+.signature{
+
+margin-top:70px;
+
+text-align:center;
+
+}
+
+.signature .love{
+
+font-family:'Great Vibes',cursive;
+
+font-size:54px;
+
+color:#9342d7;
+
+margin-bottom:10px;
+
+}
+
+.signature .name{
+
+font-size:24px;
+
+letter-spacing:4px;
+
+color:#6b3e79;
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.letter{
+
+padding:55px 28px;
+
+}
+
+.title{
+
+font-size:30px;
+
+}
+
+.greeting{
+
+font-size:40px;
+
+}
+
+.content{
+
+font-size:25px;
+
+line-height:2;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<div class="moon"></div>
+
+<div class="sparkle">
+
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+<div class="wrapper">
+
+<div class="letter">
+
+<div class="corner c1">❀</div>
+<div class="corner c2">❀</div>
+<div class="corner c3">❀</div>
+<div class="corner c4">❀</div>
+
+<div class="date">
+Sábado, 4 de Julio del 2026 — Noche
+</div>
+
+<h1 class="title">
+EN ESTA NOCHE DE SÁBADO,<br>
+MI CORAZÓN TIENE DEMASIADO AMOR PARA GUARDÁRSELO
+</h1>
+
+<div class="divider"></div>
+
+<div class="greeting">
+Mi niña preciosa:
+</div>
+
+<div class="content">
+
+<p>Esta noche quiero abrir mi corazón sin dejarme absolutamente nada por dentro. Quiero que cada palabra llegue hasta ti como una caricia, como un abrazo largo de esos que parecen detener el tiempo, porque hay noches en las que simplemente ya no puedo contener todo lo que siento por ti.</p>
+
+<p>Y esta es una de ellas.</p>
+
+<p>Hoy me di cuenta de algo que me dejó sonriendo y, al mismo tiempo, con un pequeño vacío en el pecho.</p>
+
+<p>Llevamos tres días viéndonos.</p>
+
+<p>Tres días estando tan cerca que podía perderme en tus ojos, escuchar tu voz, admirar cada gesto tuyo y sentir esa paz que solo tú sabes regalarme.</p>
+
+<p>Y, sin embargo...</p>
+
+<p><strong>No nos dimos un beso.</strong></p>
+
+<p>Qué extraño, ¿verdad?</p>
+
+<p>Ni siquiera fue porque hubiera una discusión entre nosotros. No hubo enojo, ni distancia, ni orgullo. Solo fuimos dos enamorados demasiado distraídos, tan ocupados disfrutando la compañía del otro que olvidamos hacer una de las cosas que más ama mi corazón.</p>
+
+<p><strong>Besarnos.</strong></p>
+
+<p>Y ahora que estoy aquí, escribiéndote bajo la tranquilidad de esta noche de sábado, no puedo evitar extrañarlo.</p>
+
+<p>Porque un beso tuyo nunca será un simple beso.</p>
+
+<p><strong>Es el instante en el que mi alma encuentra la tuya.</strong></p>
+
+<p><strong>Es donde el ruido del mundo desaparece.</strong></p>
+
+<p><strong>Es donde siento que todo está exactamente donde debe estar.</strong></p>
+
+<p>Extraño esa sensación de acercarme lentamente a ti, ver cómo tus ojos se iluminan antes de que nuestros labios se encuentren, sentir tu respiración tan cerquita de la mía y pensar que, si el tiempo decidiera detenerse en ese momento, yo sería completamente feliz.</p>
+
+<p>No sabes cuánto deseo volver a vivirlo.</p>
+
+<p>Y mientras más pasan las horas, más descubro que no extraño solo tus besos.</p>
+
+<p>Extraño todo lo que sucede alrededor de ellos.</p>
+
+<p>Extraño abrazarte hasta sentir que no existe espacio entre nosotros.</p>
+
+<p>Extraño acariciar tu cabello mientras te miro como si fueras la obra más hermosa que Dios decidió poner frente a mis ojos.</p>
+
+<p>Extraño sentir tus manos cerca de las mías.</p>
+
+<p>Extraño esa cercanía que hace que el corazón empiece a latir un poquito más rápido sin pedir permiso.</p>
+
+<div class="separator">✦ ✿ ✦</div>
+
+<p>Hay momentos en los que mi imaginación comienza a jugar conmigo.</p>
+
+<p>Me imagino sentándome muy cerca de ti, tomándote suavemente del rostro para contemplarte unos segundos, solo porque jamás me cansaré de admirar lo hermosa que eres.</p>
+
+<p>Después imagino acercarme despacio, con esa mezcla de nervios y emoción que todavía consigues despertar en mí, rozando apenas tus labios antes de besarte como si quisiera recuperar, en un solo instante, todos los besos que estos tres días dejaron pendientes.</p>
+
+<p>Y quizás, cuando ese beso termine, quedarme sonriendo muy cerquita de ti... solo para volver a buscar otro.</p>
+
+<p><strong>Porque contigo siempre quiero uno más.</strong></p>
+
+<p>Uno que dure un poquito más.</p>
+
+<p>Uno que me haga olvidar todo lo demás.</p>
+
+<p>No puedo evitar que también aparezcan pensamientos traviesos de vez en cuando.</p>
+
+<p>No hablo de algo exagerado.</p>
+
+<p>Hablo del deseo tan bonito de sentirte completamente cerca, de abrazarte tanto que el mundo desaparezca, de esconder mi rostro en tu cuello, respirar tu perfume, dejar un beso sobre tu frente, otro en tu mejilla y después perderme lentamente en tus labios mientras mis manos solo buscan sostenerte con toda la ternura que llevo dentro.</p>
+
+<p>Eres esa persona que logra despertar mi lado más romántico y, al mismo tiempo, esa pequeña chispa de deseo que nace cuando amas a alguien con toda el alma.</p>
+
+<p><strong>Y me encanta que seas tú quien provoque todo eso en mí.</strong></p>
+
+<div class="memory">
+
+<div class="quote">
+"El lugar donde más descansa mi corazón siempre será el espacio entre tus abrazos."
+</div>
+
+</div>
+
+<p>Pero si hay algo que hoy consigue hacerme inmensamente feliz es pensar en mañana.</p>
+
+<p><strong>Lo más probable es que salgamos al cine.</strong></p>
+
+<p>Y quizás para alguien más solo sea un plan sencillo.</p>
+
+<p>Para mí será un regalo.</p>
+
+<p>Porque no voy al cine solamente a ver una película.</p>
+
+<p><strong>Voy porque estarás tú.</strong></p>
+
+<p>Porque podré caminar a tu lado.</p>
+
+<p>Porque escucharé tu risa.</p>
+
+<p>Porque quizá nuestras manos vuelvan a encontrarse.</p>
+
+<p>Porque podré mirarte de reojo mientras tú estás concentrada viendo la pantalla y volveré a pensar lo mismo de siempre:</p>
+
+<div class="quote">
+"La historia más bonita no está frente a nosotros...<br><br>
+Está sentada justo a mi lado."
+</div>
+
+<p>Tengo tantas ganas de que mañana sea un día lleno de momentos que recordemos durante muchísimo tiempo.</p>
+
+<p>Quiero que riamos.</p>
+
+<p>Que conversemos.</p>
+
+<p>Que disfrutemos hasta de los silencios.</p>
+
+<p>Y, sobre todo, quiero que no dejemos escapar esos besos que estos últimos días se quedaron esperando.</p>
+
+<p><strong>Prométeme que, si mañana nuestros ojos se encuentran y sentimos ganas de besarnos, esta vez no dejaremos que la distracción nos gane.</strong></p>
+
+<p>Porque mi corazón ya lleva tres días esperando volver a sentir ese pequeño milagro que ocurre cada vez que tus labios encuentran los míos.</p>
+
+<div class="separator">❦ ✧ ❦</div>
+
+<p>Gracias por existir.</p>
+
+<p>Gracias por hacer que mi vida tenga tantos colores desde que llegaste.</p>
+
+<p>Gracias por demostrarme que el amor no solo se dice; también se construye con pequeños momentos, con miradas, con sonrisas, con paciencia y con la hermosa tranquilidad de saber que caminamos juntos.</p>
+
+<p>Esta noche me dormiré pensando en ti.</p>
+
+<p>Pensando en tu sonrisa.</p>
+
+<p>Pensando en tus abrazos.</p>
+
+<p>Pensando en los besos que todavía nos debemos.</p>
+
+<p>Y soñando con que mañana pueda recuperar, uno por uno, cada segundo que estos tres días dejaron pendiente.</p>
+
+<p><strong>Porque si algo tengo completamente claro es esto:</strong></p>
+
+<p><strong>Cada día te amo más que el anterior.</strong></p>
+
+<p><strong>Cada noche encuentro una razón nueva para elegirte.</strong></p>
+
+<p><strong>Y cada beso contigo sigue teniendo el poder de hacer que mi corazón vuelva a enamorarse como si fuera la primera vez.</strong></p>
+
+<p><strong>Te amo con toda mi alma, con toda mi vida y con todos los besos que llevo tres días guardando exclusivamente para ti.</strong></p>
+
+<div class="signature">
+
+<div class="love">
+Siempre tuyo,
+</div>
+
+<div class="name">
+Con un corazón que nunca dejará de buscar el tuyo ❤️
+</div>
+
+</div>
+
+<div style="margin-top:90px;text-align:center;">
+
+<div style="
+font-family:'Great Vibes',cursive;
+font-size:58px;
+line-height:1.6;
+color:#d8b0ff;
+text-shadow:
+0 0 6px #d6a4ff,
+0 0 12px #cb8fff,
+0 0 24px #b764ff,
+0 0 42px #9f3fff,
+0 0 70px #8d2fff,
+0 0 100px #7921ff;
+padding:20px 10px;">
+
+«Si algún día las estrellas olvidaran cómo brillar, si la luna dejara de iluminar las noches y el tiempo decidiera detener su camino, mi corazón seguiría encontrando la manera de llegar hasta ti, porque el destino más hermoso de toda mi existencia siempre será el refugio de tu alma, el calor de tus abrazos y la eternidad de un "nosotros". Con amor infinito, para siempre... <strong>VALERIA PETRO VILLAZÓN</strong>.»
+</div>
+
+</div>
+
+<div style="text-align:center;margin-top:70px;">
+
+<button
+onclick="window.open('PEGA_AQUÍ_EL_ENLACE_DE_LA_SIGUIENTE_CARTA','_blank')"
+style="
+padding:18px 42px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+font-size:20px;
+font-family:'Cinzel',serif;
+letter-spacing:2px;
+color:white;
+background:linear-gradient(135deg,#7d2cff,#c04cff,#ff89d7);
+box-shadow:
+0 0 18px rgba(183,90,255,.6),
+0 0 35px rgba(197,107,255,.5);
+transition:.35s;">
+Abrir la siguiente carta ❤️
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const boton=document.querySelector("button");
+
+boton.addEventListener("mouseenter",()=>{
+boton.style.transform="scale(1.08)";
+});
+
+boton.addEventListener("mouseleave",()=>{
+boton.style.transform="scale(1)";
+});
+
+</script>
+
+</body>
+</html>
